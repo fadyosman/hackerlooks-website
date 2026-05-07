@@ -694,9 +694,9 @@ function render() {
 }
 
 loadMoreBtn.addEventListener('click', function() {
+  var prevCount = grid.children.length;
   visibleCount += PAGE_SIZE;
   render();
-  grid.lastElementChild && grid.lastElementChild.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 });
 
 document.getElementById('filters').addEventListener('click', function(e) {
